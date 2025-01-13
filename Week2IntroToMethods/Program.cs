@@ -33,12 +33,39 @@
 
 
 
-            Console.Write("\n\nEnter a number: ");
-            if (int.TryParse(Console.ReadLine(), out int n))
-                Console.WriteLine("n = " + n);
-            else
-                Console.WriteLine("Invalid input. Please try again");
+            //Console.Write("\n\nEnter a number: ");
+            //if (int.TryParse(Console.ReadLine(), out int n))
+            //    Console.WriteLine("n = " + n);
+            //else
+            //    Console.WriteLine("Invalid input. Please try again");
 
+
+
+            // parameter array
+            int cars = 3, bikes = 5, trucks = 8;
+
+            Console.WriteLine("\n\nCars = " + cars + ", bikes = " + bikes + ", trucks = " + trucks);
+            Console.WriteLine($"Cars = {cars}, bikes = {bikes}, trucks = {trucks}");
+            Console.WriteLine("Cars = {0}, bikes = {1}, trucks = {2}", cars, bikes, trucks);
+
+
+            int[] array = { 6, 4, 3, 4, 6 };
+
+            PrintArray(array);
+            PrintArray(3, 4, 4, 5, 6, 76, 7, 8, 7, 6, 5, 4, 3, 3);
+
+            string s = "hello, ";
+            s = s.TrimEnd(' ', ',');
+        }
+
+
+        static void PrintArray(params int[] a)
+        {
+            Console.WriteLine("\n\nNumber of items = " + a.Length);
+
+            foreach (var i in a)
+                Console.Write(i + " ");
+            Console.WriteLine();
         }
 
 
