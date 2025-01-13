@@ -56,6 +56,18 @@
 
             string s = "hello, ";
             s = s.TrimEnd(' ', ',');
+
+
+            PersonInfo("John", 45);
+            //PersonInfo(45, "John");
+            PersonInfo(age: 45, name: "John");
+            PersonInfo("John");
+        }
+
+
+        static void PersonInfo(string name, int age = 18)
+        {
+            // method body
         }
 
 
